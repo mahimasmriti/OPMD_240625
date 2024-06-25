@@ -1,0 +1,48 @@
+project_name: 'opmd-binary-classification_densenet'
+
+# dataset details
+dataset:
+  train_csv_path: 'data/opmd_train_fcaps_foldx.csv'
+  train_dir: './data/'
+
+  val_csv_path: './data/opmd_val_fcaps_foldx.csv'
+  val_dir: './data/'
+
+  test_csv_path: './data/opmd_test_fcaps_foldx.csv'
+  test_dir: './data/'
+  
+  ind_test_csv_path: './data/opmd_ind_test_fcaps.csv'
+  ind_test_dir: './data/'  
+
+seed: 42
+
+# training details
+init_lr: 0.0001
+n_epochs: 100
+batch_size: 32
+num_workers: 12
+
+# 1: tr: img, te: img; 2: tr: img, te: segimg; 3: tr: segimg, te: segimg
+setting: 1
+# 1: segmentation on grayscale; 3: segmentation on RGB
+seg_type: 3
+
+data_aug: 1
+
+# saving checkpoints
+save_dir: './data/OPMD-GraceClassification/weights/'
+save_freq: 1
+
+fold: 5
+num_classes: 1
+
+resize: 256
+crop: 224
+
+# model details
+model: 
+  name: 'densenet201'
+  n_channels: 3
+
+quantize: True
+static_quantize: False
