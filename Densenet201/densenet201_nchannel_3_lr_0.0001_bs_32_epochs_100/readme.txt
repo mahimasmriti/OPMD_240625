@@ -1,1 +1,1 @@
-Weights for the models for 5 different folds
+Weights for the models for different folds
