@@ -2,13 +2,13 @@ project_name: 'opmd-binary-classification_densenet'
 
 # dataset details
 dataset:
-  train_csv_path: 'data/opmd_train_fcaps_foldx.csv'
+  train_csv_path: 'data/opmd_train_foldx.csv'
   train_dir: './data/'
 
-  val_csv_path: './data/opmd_val_fcaps_foldx.csv'
+  val_csv_path: './data/opmd_val_foldx.csv'
   val_dir: './data/'
 
-  test_csv_path: './data/opmd_test_fcaps_foldx.csv'
+  test_csv_path: './data/opmd_test_foldx.csv'
   test_dir: './data/'
   
   ind_test_csv_path: './data/opmd_ind_test_fcaps.csv'
@@ -30,7 +30,7 @@ seg_type: 3
 data_aug: 1
 
 # saving checkpoints
-save_dir: './data/OPMD-GraceClassification/weights/'
+save_dir: './data/OPMD-Classification/weights/'
 save_freq: 1
 
 fold: 5
